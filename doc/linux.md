@@ -1,7 +1,22 @@
- Mount cifs/smb/ntfs
+# Mount windows share
+ 
+ see also [cifs manual](https://www.samba.org/samba/docs/man/manpages-3/mount.cifs.8.html)
+
+Install required package cifs-utils:
+
+    dnf install cifs-utils
+    
+Edit /etc/fstab
+
+    //1.2.3.4/share /home/jpork/remotes/win-share cifs rw,uid=1000,gid=1000,user=win,password=winPassword,domain=winDomain,users 0 0
+
+## Mount cifs|smb|ntfs as User
+
+If regular users shall be able to mount set mount.cifs permissions: 
 
     chmod u+s /usr/sbin/mount.cifs
 
+    
 # Dns: enable short name resolution
 
 /etc/sysconfig/network-scripts/ifcfg-$IF_NAME
@@ -17,20 +32,6 @@
     
 Option "PEERDNS=no". prevents /etc/resolv.conf from being modified by a DHCP server. 
 
-
-# Dolphin missing icons workaround
-
-define an environment variable
-
-    export XDG_CURRENT_DESKTOP=kde
-
-best place to set this var is the dolphins desktop file
-  
-    /usr/share/applications/org.kde.dolphin.desktop
-
-set the exec property
-    
-    Exec=env XDG_CURRENT_DESKTOP=kde dolphin %u
 
 # Remote desktop for windows
 
@@ -69,3 +70,10 @@ need to run it as root, and a reboot may be necessary.
 
     libjli.so -> libjli.so
 ...
+
+# CentOS Text Based Installer
+
+If graphical installer doesnt work, hit escape key directly after running CentOS installation. When the command promt appears start the linux installer in text mode by entering: 
+
+    linux text
+    
