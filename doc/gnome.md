@@ -1,6 +1,8 @@
 # Keep primary display workspace steady when selecting windows on secondary display without workspaces
+    
     gsettings set org.gnome.mutter workspaces-only-on-primary true
-
+    
+    gsettings set org.gnome.shell.overrides workspaces-only-on-primary true
     
 # Dolphin missing icons workaround
 
