@@ -31,6 +31,10 @@ http:
     VBoxManage modifyvm $VM_NAME --nic1 nat --natpf1 "guesthttps,tcp,127.0.0.1,4443,,443"
     VBoxManage modifyvm $VM_NAME --nic1 nat --natpf1 "guesthttps,tcp,127.0.0.1,8080,,80"
     
+remove nic
+
+    VBoxManage modifyvm $VM_NAME --nic1 none
+    
 remove nat rule
     
     VBoxManage modifyvm $VM_NAME --natpf1 delete "guesthttp" 
