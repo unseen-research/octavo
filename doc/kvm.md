@@ -4,7 +4,11 @@
 
 # Import image
 
-virt-install -n vmname -r 2048 --os-type=linux   --os-variant=Generic --disk   /var/lib/libvirt/images/18129005F1-disk1.img,device=disk,bus=virtio  --vnc --noautoconsole --import
+    virt-install --name $vmName --ram 4096 --vcpus 4 --os-type=linux --disk  $imagePath,device=disk,bus=ide  --vnc --noautoconsole --import
+
+# Remove
+
+    > virsh undefine $vmName
 
 # Start, Stop, Power-off
 
