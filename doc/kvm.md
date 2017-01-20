@@ -1,10 +1,10 @@
 # Create image
 
-    qemu-img create -f raw example-vm-swap.img 1G
+    > qemu-img create -f raw example-vm-swap.img 1G
 
 # Import image
 
-    virt-install --name $vmName --ram 4096 --vcpus 4 --os-type=linux --disk  $imagePath,device=disk,bus=ide  --vnc --noautoconsole --import
+    > virt-install --name $vmName --ram 4096 --vcpus 4 --os-type=linux --disk  $imagePath,device=disk,bus=ide  --vnc --noautoconsole --import
 
 # Remove
 
@@ -18,11 +18,11 @@ Power off
 
 Shutdown 
 
-    virsh shutdown vmname --mode acpi
+    > virsh shutdown vmname --mode acpi
     
 # Edit Config
 
-    virsh edit <guest>
+    > virsh edit <guest>
     
 # Nat
 
