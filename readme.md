@@ -1,6 +1,7 @@
-* [Firefox](/doc/firefox.md) 
+* [Firefox](/doc/firefox.md)
 * [Gnome](/doc/gnome.md)
-* [Java](/doc/java.md) 
-* [Linux](/doc/linux.md) 
-* [Virtual Box](/doc/virtualbox.md) 
-
+* [Java](/doc/java.md)
+* [Linux](/doc/linux.md)
+* [Virtual Box](/doc/virtualbox.md)
+* [Kvm/Libvirt](/doc/kvm.md)
+* [Network Block Device (NBD)](/doc/nbd.md) 
