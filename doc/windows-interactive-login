@@ -1,0 +1,8 @@
+# Display last user name on login
+
+```
+> secpol.msc
+```
+
+Key: 
+"Local Policies/Security Options/Interactive login" = enabled | disabled
